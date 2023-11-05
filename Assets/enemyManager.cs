@@ -23,7 +23,7 @@ public class enemyManager : MonoBehaviour
     {
         spawnTimer= spawnTimer + Time.deltaTime;
 
-        Debug.Log(spawnTimer);
+       // Debug.Log(spawnTimer);
 
         if(spawnTimer >= 5)
         {

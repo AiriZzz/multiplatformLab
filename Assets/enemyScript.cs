@@ -21,14 +21,16 @@ public class enemyScript : MonoBehaviour
     void Update()
     {
         enemy.transform.Translate(0, enemySpeed,0);
+
+   
     }
 
-
-    void OnTriggerEnter(Collider collide)
+    private void OnTriggerEnter(Collider collide)
     {
-       if(collide.tag == "Destroy Barrier")
+        if(collide.tag == "Destroy Barrier")
         {
-            Debug.Log("HIT");
+            Destroy(enemy);
         }
     }
+  
 }
