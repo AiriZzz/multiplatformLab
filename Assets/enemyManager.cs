@@ -1,25 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class enemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
-    [SerializeField] float enemySpeed = 0.05f;
     
-    int enemyPos;
+    float spawnTimer;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyPos = Random.Range(-5, 5);
        
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemy.transform.Translate(0, enemySpeed, 0);
+        spawnTimer= spawnTimer + Time.deltaTime;
+
+        Debug.Log(spawnTimer);
+
+        if(spawnTimer >= 5)
+        {
+            spawnTimer = 0;
+
+            int spawnPos = Random.Range(-5, 5);
+            Instantiate(enemy, new Vector3(spawnPos, 0, 50), enemy.transform.rotation);
+        }
 
     }
 }
