@@ -20,8 +20,8 @@ public class seaScroll : MonoBehaviour
     void Update()
     {
         
-        sea.transform.Translate(10*Time.deltaTime,0,0);
-        sea2.transform.Translate(-10* Time.deltaTime, 0, 0);
+        sea.transform.Translate(50*Time.deltaTime,0,0);
+        sea2.transform.Translate(-50* Time.deltaTime, 0, 0);
 
         if (sea.transform.position.z < -55)
         {
