@@ -28,7 +28,7 @@ public class enemyManager : MonoBehaviour
 
        // Debug.Log(spawnTimer);
 
-        if(spawnTimer >= 3)
+        if(spawnTimer >= 1.5)
         {
             spawnTimer = 0;
 
