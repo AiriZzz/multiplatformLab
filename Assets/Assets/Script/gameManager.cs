@@ -48,4 +48,9 @@ public class gameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
